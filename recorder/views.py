@@ -28,7 +28,7 @@ def index(request):
 		os.system("git add .")
 		os.system("git commit -am 'add new child'")
 		os.system("git push")
-		return render(request, "recorder/index.html", context="alright")
+		return render(request, "recorder/index.html", context={"result": "alright"})
 
 	return render(request, "recorder/index.html", context={"result": "error"})
 
