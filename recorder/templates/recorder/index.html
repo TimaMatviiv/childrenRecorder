@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<!-- CSS only -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+</head>
+<body>
+	<div class="container">
+		<h1>Реєстрація дітей</h1>
+
+
+		<form action="" method="post">
+			{% csrf_token %}
+
+			<div class="mb-3">
+		    <label class="form-label">Імʼя дитини</label>
+		    <input type="text" class="form-control" name="first_name">
+		  </div>
+		  <div class="mb-3">
+		    <label class="form-label">Прізвище дитини</label>
+		    <input type="text" class="form-control" name="last_name">
+		  </div>
+		  <div class="mb-3">
+		    <label class="form-label">З якого села</label>
+		    <input type="text" class="form-control" name="village">
+		  </div>
+		  <div class="mb-3">
+		    <label class="form-label">Який клас закінчила</label>
+		    <input type="text" class="form-control" name="ended_class">
+		  </div>
+		  <div class="mb-3">
+		    <label class="form-label">Імʼя батьків</label>
+		    <input type="text" class="form-control" name="parent_name">
+		  </div>
+		  <div class="mb-3">
+		    <label class="form-label">Номер телефону батьків</label>
+		    <input type="text" class="form-control" name="parent_phone_number">
+		  </div>
+		  <div class="mb-3">
+		    <label class="form-label">Проблеми з здоровям</label>
+		    <input type="text" class="form-control" name="health_problems">
+		  </div>
+		  <button type="submit" class="btn btn-primary">Додати</button>
+		</form>
+
+		<p>{{ result }}</p>
+	</div>
+</body>
+</html>
