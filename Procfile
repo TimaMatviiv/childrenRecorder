@@ -1,1 +1,1 @@
-web: gunicorn recorder.wsgi
+web: gunicorn childrenRecorder.wsgi
