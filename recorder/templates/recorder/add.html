@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+	<h1>Реєстрація дітей</h1>
+	<a href="{% url 'index' %}"><button type="button" class="btn btn-dark to-main-btn">На головну</button></a>
+	<br>
+
+	<form action="" method="post">
+		{% csrf_token %}
+
+		<div class="mb-3">
+			<label class="form-label">Імʼя дитини</label>
+			<input type="text" class="form-control" name="first_name" value="{{ first_name }}">
+		</div>
+		<div class="mb-3">
+			<label class="form-label">Прізвище дитини</label>
+			<input type="text" class="form-control" name="last_name" value="{{ last_name }}">
+		</div>
+		<div class="mb-3">
+			<label class="form-label">З якого села</label>
+			<input type="text" class="form-control" name="village" value="{{ village }}">
+		</div>
+		<div class="mb-3">
+			<label class="form-label">Який клас закінчила</label>
+			<input type="text" class="form-control" name="ended_class" value="{{ ended_class }}">
+		</div>
+		<div class="mb-3">
+			<label class="form-label">Імʼя батьків</label>
+			<input type="text" class="form-control" name="parent_name" value="{{ parent_name }}">
+		</div>
+		<div class="mb-3">
+			<label class="form-label">Номер телефону батьків</label>
+			<input type="text" class="form-control" name="parent_phone_number" value="{{ parent_phone_number }}">
+		</div>
+		<div class="mb-3">
+			<label class="form-label">Проблеми зі здоровям</label>
+			<input type="text" class="form-control" name="health_problems" value="{{ health_problems }}">
+		</div>
+		<button type="submit" class="btn btn-primary">Додати</button>
+	</form>
+
+	<p>{{ result }}</p>
+
+	{% if message %}
+		<div class="alert alert-{{ class }} alert-dismissible fade show" role="alert">
+		  {{ message_text }}
+		  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+		</div>
+	{% endif %}
+
+{% endblock %}
