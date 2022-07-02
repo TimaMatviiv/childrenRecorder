@@ -9,3 +9,6 @@ class Child(models.Model):
 	parent_name = models.CharField(max_length=200)
 	parent_phone_number = models.CharField(max_length=200)
 	health_problems = models.CharField(max_length=1500)
+
+	def __str__(self):
+		return self.first_name
