@@ -47,6 +47,27 @@
 		</form>
 
 		<p>{{ result }}</p>
+
+		<table class="table">
+		  <thead>
+		    <tr>
+		      <th scope="col">#</th>
+		      <th scope="col">Ім'я</th>
+		      <th scope="col">Прізвище</th>
+		      <th scope="col">Клас</th>
+		    </tr>
+		  </thead>
+		  <tbody>
+				{% for user in users %}
+			    <tr>
+			      <th scope="row">{{ user.id }}</th>
+			      <td>{{ user.first_name }}</td>
+			      <td>{{ user.last_name }}</td>
+			      <td>{{ user.ended_class }}</td>
+			    </tr>
+				{% endfor %}
+		  </tbody>
+		</table>
 	</div>
 </body>
 </html>
