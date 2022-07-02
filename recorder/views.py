@@ -86,5 +86,9 @@ def add_child(request):
 			"class": "success",
 			"message_text": "Успішно додано!"
 		}
+
+		os.system("git add .")
+		os.system("git commit -am 'update db'")
+		os.system("git push")
 		return render(request, "recorder/add.html", context=context)
 	return render(request, "recorder/add.html", context={"message": False})
