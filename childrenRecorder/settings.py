@@ -83,8 +83,8 @@ DATABASES = {
     #     'ENGINE': 'django.db.backends.mysql',
     #     'NAME': 'recorder',
     #     'USER': "linroot",
-    #     'PASSWORD': "p_ICDR3Fxnf0NZWi",
-    #     'HOST': "lin-3786-3488-mysql-primary.servers.linodedb.net",
+    #     'PASSWORD': "yu4F-9GF9K8orhwy",
+    #     'HOST': "lin-5413-4129-mysql-primary.servers.linodedb.net",
     #     'PORT': 3306
     # }
 }
