@@ -1,8 +1,6 @@
 from django.shortcuts import render
 from .models import Child
 
-import os
-
 # Create your views here.
 
 def index(request):
@@ -87,9 +85,5 @@ def add_child(request):
 			"message_text": "Успішно додано!"
 		}
 
-		os.system("git add .")
-		os.system("git commit -am 'update db'")
-		os.system("git push")
-		print("added")
 		return render(request, "recorder/add.html", context=context)
 	return render(request, "recorder/add.html", context={"message": False})
