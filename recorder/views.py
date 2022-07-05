@@ -8,7 +8,7 @@ def index(request):
 	context = {
 		"users": users
 	}
-	
+
 	return render(request, "recorder/index.html", context=context)
 
 
@@ -78,7 +78,7 @@ def add_child(request):
 		parent_name = ""
 		parent_phone_number = ""
 		health_problems = ""
-		
+
 		context = {
 			"message": True,
 			"class": "success",
