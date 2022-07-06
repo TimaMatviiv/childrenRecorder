@@ -9,30 +9,32 @@
 
 	<table class="table">
 	  <thead>
-	    <tr>
-	      <th scope="col">#</th>
-	      <th scope="col">Ім'я</th>
-	      <th scope="col">Прізвище</th>
-	      <th scope="col">Село</th>
-	      <th scope="col">Клас</th>
-	      <th scope="col">Батьки</th>
-	      <th scope="col">Телефон батьків</th>
-	      <th scope="col">Здоровя</th>
-	    </tr>
+		<tr>
+		  <th scope="col">#</th>
+		  <th scope="col">Ім'я</th>
+		  <!-- <th scope="col">Село</th>
+		  <th scope="col">Клас</th>
+		  <th scope="col">Батьки</th>
+		  <th scope="col">Телефон батьків</th>
+		  <th scope="col">Здоровя</th> -->
+		  <th scope="col">Дії</th>
+		</tr>
 	  </thead>
 	  <tbody>
 			{% for user in users %}
-		    <tr>
-		      <th scope="row">{{ user.id }}</th>
-		      <td>{{ user.first_name }}</td>
-		      <td>{{ user.last_name }}</td>
-		      <td>{{ user.village }}</td>
-		      <td>{{ user.ended_class }}</td>
-		      <td>{{ user.parent_name }}</td>
-		      <td>{{ user.parent_phone_number }}</td>
-		      <td>{{ user.health_problems }}</td>
-
-		    </tr>
+			<tr>
+			  <th scope="row">{{ user.id }}</th>
+			  <td>{{ user.first_name }} {{ user.last_name }}</td>
+			  <!-- <td>{{ user.village }}</td>
+			  <td>{{ user.ended_class }}</td>
+			  <td>{{ user.parent_name }}</td>
+			  <td>{{ user.parent_phone_number }}</td>
+			  <td>{{ user.health_problems }}</td> -->
+			  <td>
+			  	<a href="{% url 'child' user.id %}"><button type="button" class="btn btn-primary">Переглянути</button></a>
+				<a href="{% url 'delete_child' user.id %}"><button type="button" class="btn btn-danger">Видалити</button></a>
+			  </td>
+			</tr>
 			{% endfor %}
 	  </tbody>
 	</table>

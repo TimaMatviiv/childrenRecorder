@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block title %}{{ child.first_name }} {{ child.last_name }}{% endblock %}
+{% block content %}
+
+	<h1>{{ child.first_name }} {{ child.last_name }}</h1>
+	<p>
+		Місце проживання: {{ child.village }}<br>
+		Який клас закінчила дитина: {{ child.ended_class }}<br>
+		Іʼмя одного з батьків: {{ child.parent_name }}<br>
+		Номер телефону одного з батьків: {{ child.parent_phone_number }}<br>
+		Проблеми зі здоровʼям: {{ child.health_problems }}<br>
+	</p>
+
+{% endblock %}

@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from .models import Child
 
 # Create your views here.
@@ -87,3 +87,24 @@ def add_child(request):
 
 		return render(request, "recorder/add.html", context=context)
 	return render(request, "recorder/add.html", context={"message": False})
+
+
+
+def child(request, child_id):
+	child = Child.objects.get(id=child_id)
+	return render(request, 'recorder/child.html', {"child": child})
+
+
+def delete_child(request, child_id):
+	Child.objects.get(id=child_id).delete()
+	return redirect('index')
+
+
+
+
+
+
+
+
+
+
